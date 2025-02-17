@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Scope di let var e const</title>
+</head>
+<body>
+
+	<script>
+		var globalVar = "Sono una variabile var globale";
+		let globalLet = "Sono una variabile let globale";
+		const globalConst = "Sono una variabile const globale";
+
+		function testScope() {
+			console.log(globalVar);
+			console.log(globalLet);
+			console.log(globalConst);
+
+			if(true) {
+				var localVar = "Sono una variabile var blocco";
+				let localLet = "Sono una variabile let blocco";
+				const localConst = "Sono una variabile const blocco";
+				console.log(localVar);
+				console.log(localLet);
+				console.log(localConst);
+			};
+
+			console.log(localVar);
+			// console.log(localLet);
+			// console.log(localConst);
+		};
+
+		testScope();
+
+		console.log(globalVar);
+		console.log(globalLet);
+		console.log(globalConst);
+
+		// console.log(localVar);
+		// console.log(localLet);
+		// console.log(localConst);
+
+		if (true) {
+			var blockVar = "Sono una variabile var blocco";
+			let blockLet = "Sono una variabile let blocco";
+			const blockConst = "Sono una variabile const blocco";
+			console.log(blockVar);
+			console.log(blockLet);
+			console.log(blockConst);
+		};
+
+		console.log(blockVar);
+		// console.log(blockLet);
+		// console.log(blockConst);
+	</script>
+</body>
+</html>
